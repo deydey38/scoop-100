@@ -1,0 +1,232 @@
+body{
+  margin:0px;
+  height:100%;
+  font-family: raleway, gill sans extrabold, century gothic, sans-serif;
+}
+
+.navbarBlack {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 1;
+}
+
+.navbarBlack a {
+  float: left;
+  display: block;
+  text-align: center;
+  color:#f2f2f2;
+  padding: 14px 0;
+  text-decoration: none;
+  font-size: 17px;
+  width: 25%;
+}
+
+.navbarBlack a:hover{
+  background-color: #f2f2f2;
+  color:#333;
+}
+
+.navbarTrans {
+  overflow: hidden;
+  background-color: transparent;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 1;
+}
+
+.navbarTrans a {
+  float: left;
+  display: block;
+  color:black;
+  text-align: center;
+  padding: 14px 0;
+  text-decoration: none;
+  font-size: 17px;
+  width: 25%;
+}
+
+.navbarTrans a:hover{
+  background-color: #333;
+  color:#f2f2f2;
+}
+
+.scoop{
+  background-image: url("photo/scoop.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.scoop h1 {
+  animation : animateTop 10s;
+  display: inline-block;
+  padding: 5px;
+  font-size: 4em;
+  color: white;
+  border-bottom: 1px solid white;
+  letter-spacing: 5px;
+  position: absolute;
+  top: 50%;
+  margin-top: -44px;
+  left: 50%;
+  margin-left: -187px;
+}
+
+.scoop h2{
+  display: inline-block;
+  padding: 5px;
+  font-size: 3em;
+  color: white;
+  letter-spacing: 5px;
+  position: absolute;
+  top: 50%;
+  margin-top: 44px;
+  left: 50%;
+  margin-left: -240px;
+}
+
+.horaires{
+  background-image: url("photo/horaires.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.horaires h1{
+  display: inline-block;
+  color: black;
+  font-size: 4em;
+  letter-spacing: 5px;
+  padding-left: 10%;
+}
+
+.heures{
+  display: inline-block;
+  position: absolute;
+  color: black;
+  font-size: 2em;
+  top: 50%;
+  left: 10%;
+}
+
+.shampoo{
+  background-image: url("photo/shampoo.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  width: 100%;
+  overflow: hidden;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.conseil{
+  color:white;
+  text-align: right;
+  position: absolute;
+  height:200px;
+  top:50%;
+  margin-top: -100px;
+  right: 0;
+}
+
+.conseil h2{
+  font-size: 2em;
+}
+
+.conseil h1{
+  font-size: 3em;
+}
+
+.tarifs{
+  height:100vh;
+  width:100%;
+  color:black;
+  position: relative;
+}
+
+.tarifs h1 {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  margin-left: -100px;
+  padding: 10px 20px;
+  font-size: 4em;
+  letter-spacing: 5px;
+  display: inline-block;
+  color:white;
+  background-color: black;
+}
+
+.prix{
+  padding-top: 220px;;
+}
+
+div.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+}
+
+div.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 33.3%;
+    padding: 14px 0;
+    transition: 0.3s;
+    font-size: 17px;
+    font-family: raleway, gill sans extrabold, century gothic, sans-serif;
+}
+
+.tab button:last-child{
+  width: 33.4%;
+}
+div.tab button:hover {
+    background-color: #ddd;
+}
+
+div.tab button.active {
+    background-color: black;
+    color:white;
+}
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+}
+
+.contact{
+  width: 100%;
+  height: 200px;
+  background-color: #333;
+  color:#f2f2f2;
+  position:relative;
+  text-align: center;
+}
+
+.contact h1{
+  padding-top: 20px;
+}
+
+.ctc{
+  width:50%;
+  float: left;
+  text-align: center;
+}

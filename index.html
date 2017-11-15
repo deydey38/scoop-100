@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Scoop 100</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+
+    <div class="navbarTrans" id="navbar">
+      <a class="link" href="#">MENU</a>
+      <a class="link" href="#horaires">HORAIRES</a>
+      <a class="link" href="#tarifs">TARIFS</a>
+      <a class="link" href="#contact">CONTACT</a>
+      </ul>
+    </div>
+
+    <div class="scoop">
+      <h1>Scoop 100</h1>
+      <h2>Salon de coiffure</h2>
+    </div>
+
+    <div class="horaires" id="horaires">
+      <h1>Horaires</h1>
+      <div class="heures">
+        Mardi - Mercredi : 14h - 18h <br/>
+        Jeudi - Vendredi : 9h30 - 18h
+      </div>
+    </div>
+
+    <div class="shampoo">
+      <div class="conseil">
+      <h2>Besoin d'un nouveau shampoing ?</h2>
+      <h1>Demandez conseil à votre coiffeuse ...</h1>
+      </div>
+    </div>
+
+    <div class="tarifs" id="tarifs">
+      <h1>Tarifs</h1>
+
+      <div class="prix">
+        <div class="tab">
+          <button class="tablinks" onclick="openCity(event, 'Homme')">Homme</button>
+          <button class="tablinks" onclick="openCity(event, 'Femme')">Femme</button>
+          <button class="tablinks" onclick="openCity(event, 'Enfant')">Enfant</button>
+        </div>
+
+        <div id="Homme" class="tabcontent">
+          <h3>Homme</h3>
+          <p>Tarifs homme</p>
+        </div>
+
+        <div id="Femme" class="tabcontent">
+          <h3>Femme</h3>
+          <p>Tarifs femme</p>
+        </div>
+
+        <div id="Enfant" class="tabcontent">
+          <h3>Enfant</h3>
+          <p>Tarifs enfant</p>
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="contact" id="contact">
+      <h1>Contact</h1>
+      <div class="adresse ctc">
+        Sur place : <br/>
+        159 Cours de la Libération et du Général de Gaulle <br/>
+         38100 Grenoble
+      </div>
+      <div class="tel ctc">
+        Par téléphone : <br/>
+        04 76 96 32 99
+      </div>
+    </div>
+
+    <script>
+    function openCity(evt, type) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(type).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+      if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+        document.getElementById("navbar").className="navbarBlack";
+      } else {
+        document.getElementById("navbar").className="navbarTrans";
+      }
+    }
+
+    </script>
+
+  </body>
+</html>
