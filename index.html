@@ -17,11 +17,15 @@
       <a class="link" href="#horaires">HORAIRES</a>
       <a class="link" href="#tarifs">TARIFS</a>
       <a class="link" href="#contact">CONTACT</a>
+      <a href="javascript:void(0);" id="icon" class="icon" onclick="myFunction()">&#9776;</a>
     </div>
 
     <div class="scoop">
-      <h1>Scoop 100</h1>
-      <h2>Salon de coiffure</h2>
+      <div class="header">
+        <h1>Scoop 100</h1>
+        <p></p>
+        <h2>Salon de coiffure</h2>
+      </div>
     </div>
 
     <div class="horaires" id="horaires">
@@ -82,6 +86,24 @@
     </div>
 
     <script>
+    function myFunction() {
+      var x = document.getElementById("navbar");
+      var icon = document.getElementById("icon");
+      if (x.className === "navbarBlack") {
+          x.className += " responsive";
+          icon.innerHTML="&#x26CC;";
+      } else if (x.className === "navbarTrans") {
+          x.className += " responsive";
+          icon.innerHTML="&#x26CC;";
+      } else if (x.className === "navbarBlack responsive") {
+          x.className = "navbarBlack";
+          icon.innerHTML="&#9776;";
+      } else if (x.className === "navbarTrans responsive") {
+          x.className = "navbarTrans";
+          icon.innerHTML="&#9776;";
+      }
+    }
+
     function openCity(evt, type) {
       var i, tabcontent, tablinks;
       tabcontent = document.getElementsByClassName("tabcontent");
@@ -98,10 +120,13 @@
 
     window.onscroll = function() {scrollFunction()};
     function scrollFunction() {
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      var icon = document.getElementById("icon");
+      if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
         document.getElementById("navbar").className="navbarBlack";
+        icon.innerHTML="&#9776;";
       } else {
         document.getElementById("navbar").className="navbarTrans";
+        icon.innerHTML="&#9776;";
       }
     }
 

@@ -55,6 +55,11 @@ body{
   color:red;
 }
 
+#navbar .icon {
+    display: none;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
 .scoop{
   background-image: url("photo/scoop.jpeg");
   background-position: center;
@@ -67,35 +72,52 @@ body{
   position: relative;
 }
 
-.scoop h1 {
-  animation : animateTop 10s;
-  display: inline-block;
+.header{
+  position : absolute;
+  top:40%;
+  width: 100%;
   text-align: center;
+}
+
+.header h1 {
+  --display: inline-block;
+  margin: 0;
   text-align: center;
   padding: 5px;
   font-size: 4em;
   color: white;
-  border-bottom: 1px solid white;
   letter-spacing: 5px;
-  position: absolute;
+/*  position: absolute;
   top: 50%;
   margin-top: -44px;
   left: 50%;
-  margin-left: -187px;
+  ---left: -187px;*/
 }
 
-.scoop h2{
-  display: inline-block;
+.header p{
+  border-bottom: 1px solid white;
+  width: 300px;
+  text-align: center;
+  margin: 0;
+  position: absolute;
+  top:84px;
+  left: 50%;
+  margin-left: -150px;s
+}
+
+.header h2{
+  --display: inline-block;
+  margin: 0;
   text-align: center;
   padding: 5px;
   font-size: 3em;
   color: white;
   letter-spacing: 5px;
-  position: absolute;
+/*  position: absolute;
   top: 50%;
   margin-top: 44px;
   left: 50%;
-  margin-left: -240px;
+  margin-left: -240px;*/
 }
 
 .horaires{
@@ -238,4 +260,38 @@ div.tab button.active {
   width:50%;
   float: left;
   text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+  #navbar a:not(:first-child) {display: none;}
+  #navbar a.icon {
+    float: right;
+    display: block;
+  }
+
+  .scoop{
+    h1
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #navbar.responsive {--position: relative;}
+  #navbar.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  #navbar.responsive a {
+    float: none;
+    display: block;
+    --text-align: left;
+  }
+
+  .header p{
+    border: none;
+  }
+
+  .header{
+    top: 20%;
+  }
 }
